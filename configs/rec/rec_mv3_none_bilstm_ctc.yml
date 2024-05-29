@@ -1,13 +1,13 @@
 Global:
   use_gpu: True
-  use_wandb: True
-  epoch_num: 100
+  # use_wandb: True
+  epoch_num: 1000
   log_smooth_window: 20
-  print_batch_step: 10
+  print_batch_step: 500
   save_model_dir: ./output/rec/mv3_none_bilstm_ctc/
   save_epoch_step: 3
   # evaluation is run every 2000 iterations
-  eval_batch_step: [0, 2000]
+  eval_batch_step: [0, 5000]
   cal_metric_during_train: True
   pretrained_model:
   checkpoints:
@@ -16,14 +16,14 @@ Global:
   infer_img: doc/imgs_words_en/word_10.png
   # for data or label process
   character_dict_path: ppocr/utils/dict/vi_dict.txt
-  max_text_length: 25
+  max_text_length: 128
   infer_mode: False
   use_space_char: True
   save_res_path: ./output/rec/predicts_mv3_none_bilstm_ctc.txt
 
-wandb:
-  project: VNPaddleOCR
-  name: vi_CRNN_MobileNetV3
+# wandb:
+#   project: VNPaddleOCR
+#   name: vi_CRNN_MobileNetV3
 
 Optimizer:
   name: Adam

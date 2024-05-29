@@ -1,8 +1,7 @@
 Global:
   debug: false
-  use_gpu: true
-  use_wandb: true
-  epoch_num: 100
+  use_gpu: false
+  epoch_num: 500
   log_smooth_window: 20
   print_batch_step: 10
   save_model_dir: ./output/rec_ppocr_v4
@@ -22,10 +21,6 @@ Global:
   use_space_char: true
   distributed: true
   save_res_path: ./output/rec/vi_ocr_v4.txt
-
-wandb:
-  project: VNPaddleOCR
-  name: vi_PP-OCRv4_rec
 
 Optimizer:
   name: Adam
