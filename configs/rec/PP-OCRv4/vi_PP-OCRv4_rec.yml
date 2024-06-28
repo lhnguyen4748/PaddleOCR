@@ -86,7 +86,7 @@ Train:
         ext_data_num: 2
         image_shape:
         - 48
-        - 1080
+        - 512
         - 3
         max_text_length: 25
     - RecAug: null
@@ -102,11 +102,11 @@ Train:
   sampler:
     name: MultiScaleSampler
     scales:
-    - - 1080
+    - - 512
       - 32
-    - - 1080
+    - - 512
       - 48
-    - - 1080
+    - - 512
       - 64
     first_bs: 96
     fix_bs: false
@@ -135,7 +135,7 @@ Eval:
         image_shape:
         - 3
         - 48
-        - 1080
+        - 512
     - KeepKeys:
         keep_keys:
         - image
