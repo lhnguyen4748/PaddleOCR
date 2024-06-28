@@ -73,10 +73,10 @@ Train:
   dataset:
     name: MultiScaleDataSet
     ds_width: false
-    data_dir: ./dataset/
+    data_dir: ./data_line
     ext_op_transform_idx: 1
     label_file_list:
-    - ./dataset/train_labels.txt
+    - ./data_line/train_line_annotation.txt
     transforms:
     - DecodeImage:
         img_mode: BGR
@@ -122,9 +122,9 @@ Train:
 Eval:
   dataset:
     name: SimpleDataSet
-    data_dir: ./dataset
+    data_dir: ./data_line
     label_file_list:
-    - ./dataset/test_labels.txt
+    - ./data_line/test_line_annotation.txt
     transforms:
     - DecodeImage:
         img_mode: BGR
